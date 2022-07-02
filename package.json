@@ -6,15 +6,7 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"postinstall": "husky install",
-		"commit": "npx cz-customizable"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "eslint --fix && prettier --write",
-			"pre-push": "npm test"
-		}
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"next": "12.2.0",
@@ -31,7 +23,6 @@
 		"eslint-config-next": "12.2.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-prettier": "^4.2.1",
-		"husky": "^8.0.1",
 		"prettier": "^2.7.1",
 		"typescript": "4.7.4"
 	}

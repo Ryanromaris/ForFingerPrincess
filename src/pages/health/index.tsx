@@ -1,5 +1,5 @@
 const HealthPage = () => {
-	return <></>;
+	return <>Health Page test</>;
 };
 
 export default HealthPage;

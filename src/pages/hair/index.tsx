@@ -1,5 +1,5 @@
 const HairPage = () => {
-	return <></>;
+	return <>Hair Page</>;
 };
 
 export default HairPage;

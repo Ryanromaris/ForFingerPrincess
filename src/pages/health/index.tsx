@@ -1,5 +1,5 @@
 const HealthPage = () => {
-	return <>Health Page test aasddasㅁㄴㅇaasdasdaadaas</>;
+	return <>Health Page test aasddasㅁㄴㅇasssasdasdaadaas</>;
 };
 
 export default HealthPage;

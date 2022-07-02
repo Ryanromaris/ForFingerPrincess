@@ -8,8 +8,7 @@
 		"start": "next start",
 		"lint": "next lint",
 		"postinstall": "husky install",
-    "commit": "npx cz-customizable"
-    
+		"commit": "npx cz-customizable"
 	},
 	"husky": {
 		"hooks": {

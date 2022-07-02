@@ -1,5 +1,7 @@
+import Layout from '../../components/layout/Layout';
+
 const HealthPage = () => {
-	return <>Health Page test</>;
+	return <Layout>Health Page</Layout>;
 };
 
 export default HealthPage;

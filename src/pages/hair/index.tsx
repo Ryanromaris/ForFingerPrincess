@@ -1,5 +1,13 @@
+import Layout from '../../components/layout/Layout';
+
 const HairPage = () => {
-	return <>Hair Page</>;
+	return (
+		<>
+			<Layout>
+				<div>Hair Page</div>
+			</Layout>
+		</>
+	);
 };
 
 export default HairPage;

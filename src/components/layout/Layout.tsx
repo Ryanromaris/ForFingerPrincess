@@ -13,8 +13,10 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 			<div className="main_container">
 				<div className="main_box">
 					<div className="logo_box">
-						<div className=""></div>
-						<Image src={'/logo.png'} alt="logo" width={90} height={45} />
+						<div className="">aa</div>
+						<div className="logo_image">
+							<Image src={'/logo.png'} alt="logo" width={90} height={45} />
+						</div>
 						<div className="logo_nav">
 							<div>검색아이콘</div>
 							<div>마이페이지 아이콘</div>

@@ -20,6 +20,8 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 900px;
+	border: 3px blue solid;
 }
 
 .main_box {
@@ -33,19 +35,24 @@ body {
 }
 
 .logo_box {
+	width: 100%;
+	height: 100px;
 	position: sticky;
 	z-index: 10;
 	top: 0px;
 	box-shadow: 0 4px 2px -2px #eeeeee;
 	background-color: white;
-	border: royalblue 1px solid;
+
 	display: flex;
-	justify-content: space-between;
+
 	align-items: center;
+
+	border: royalblue 1px solid;
 }
 
 .logo_box > div {
-	flex-basis: 100px;
+	width: 33%;
+	border: seagreen 1px solid;
 }
 
 .logo_nav {
@@ -59,15 +66,9 @@ body {
 	border: 1px purple solid;
 }
 
-.main_content {
-	height: 2000px;
-
-	border: orange 1px solid;
-}
-
 .footer_nav_container {
 	width: 900px;
-	height: 50px;
+	height: 100px;
 
 	position: fixed;
 	bottom: 0;
@@ -84,4 +85,20 @@ a {
 
 * {
 	box-sizing: border-box;
+}
+
+.main_content {
+	height: 2000px;
+	border: orange 1px solid;
+	overflow-x: hidden;
+}
+
+.flicking_viewport {
+	width: 80%;
+	border: 1px soild red;
+}
+.slide_component {
+	width: 200px;
+	height: 200px;
+	border: 1px solid #eeeeee;
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Router from 'next/router';
 
 export interface ILayoutProps {
 	hasLogoBar?: boolean;
@@ -11,20 +12,19 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 		<>
 			<div className="main_container">
 				<div className="main_box">
-					{hasLogoBar && (
-						<div className="logo_box">
-							<div className=""></div>
-							<Image src={'/logo.png'} alt="logo" width={90} height={45} />
-							<div className="logo_nav">
-								<div>검색아이콘</div>
-								<div>마이페이지 아이콘</div>
-							</div>
+					<div className="logo_box">
+						<div className=""></div>
+						<Image src={'/logo.png'} alt="logo" width={90} height={45} />
+						<div className="logo_nav">
+							<div>검색아이콘</div>
+							<div>마이페이지 아이콘</div>
 						</div>
-					)}
+					</div>
+
 					{!hasLogoBar && (
 						<div className="header_bar_container">
 							<div>헤어 게시판</div>
-							<select name="boards">
+							<select name="boards" onChange={e => Router.push(`/${e.target.value}`)}>
 								<option value="hair">헤어 게시판</option>
 								<option value="health">헬스 게시판</option>
 								<option value="all">전체 게시판</option>

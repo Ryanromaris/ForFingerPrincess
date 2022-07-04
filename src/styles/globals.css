@@ -55,7 +55,7 @@ body {
 .header_bar_container {
 	display: flex;
 	justify-content: space-between;
-
+	top: 45px;
 	border: 1px purple solid;
 }
 

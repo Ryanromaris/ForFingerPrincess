@@ -7,6 +7,15 @@ body {
 	background-color: white;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 .screen_out {
 	overflow: hidden;
 	position: absolute;
@@ -20,10 +29,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	/* border: 3px blue solid; */
 }
 
 .main_box {
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	width: 900px;
 	min-height: 100vh;
@@ -31,21 +43,30 @@ body {
 
 	/* border: 1px red solid; */
 }
-
-.logo_box {
+/* .sticky {
 	position: sticky;
-	z-index: 10;
+} */
+.logo_box {
+	display: flex;
+	align-items: center;
+	position: -webkit-sticky;
+	position: sticky;
 	top: 0px;
+	width: 100%;
+	height: 50px;
+
+	z-index: 10;
+
 	box-shadow: 0 4px 2px -2px #eeeeee;
 	background-color: white;
-	border: royalblue 1px solid;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+
+	/* border: royalblue 1px solid; */
 }
 
 .logo_box > div {
-	flex-basis: 100px;
+	width: 33%;
+
+	/* border: seagreen 1px solid; */
 }
 
 .logo_nav {
@@ -59,12 +80,6 @@ body {
 	border: 1px purple solid;
 }
 
-.main_content {
-	height: 2000px;
-
-	border: orange 1px solid;
-}
-
 .footer_nav_container {
 	width: 900px;
 	height: 50px;
@@ -73,15 +88,57 @@ body {
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, 0);
+	box-shadow: 0 -4px 2px -2px #eeeeee;
 
-	border: 2px green solid;
+	background-color: white;
+	/* border: 2px green solid; */
 }
 
-a {
-	color: inherit;
-	text-decoration: none;
+.main_content {
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 50px;
+
+	/* border: orange 1px solid; */
 }
 
-* {
-	box-sizing: border-box;
+.popular_board_container {
+	width: 90%;
+	height: 200px;
+	margin: 10px;
+
+	/* border: 1px red solid; */
+}
+
+.popular_board_title {
+	display: flex;
+	margin: 10px;
+}
+
+.popular_board_content_box {
+	display: flex;
+	height: 180px;
+	overflow-y: auto;
+	scroll-snap-type: x;
+
+	/* border: 3px rgb(77, 151, 170) solid; */
+}
+.popular_board_content {
+	border: 3px #eeeeee solid;
+	margin: 5px;
+	min-width: 80%;
+	height: 150px;
+}
+
+.x.mandatory-scroll-snapping {
+	scroll-snap-type: x mandatory;
+}
+
+.popular_board_content_box > div {
+	text-align: center;
+	scroll-snap-align: center;
+	flex: none;
 }

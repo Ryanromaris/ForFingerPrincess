@@ -30,7 +30,7 @@ a {
 	justify-content: center;
 	align-items: center;
 
-	border: 3px blue solid;
+	/* border: 3px blue solid; */
 }
 
 .main_box {
@@ -41,30 +41,32 @@ a {
 	min-height: 100vh;
 	text-align: center;
 
-	overflow: hidden;
-
 	/* border: 1px red solid; */
 }
-
+/* .sticky {
+	position: sticky;
+} */
 .logo_box {
+	display: flex;
+	align-items: center;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0px;
 	width: 100%;
 	height: 50px;
-	position: sticky;
+
 	z-index: 10;
-	top: 0px;
+
 	box-shadow: 0 4px 2px -2px #eeeeee;
 	background-color: white;
 
-	display: flex;
-
-	align-items: center;
-
-	border: royalblue 1px solid;
+	/* border: royalblue 1px solid; */
 }
 
 .logo_box > div {
 	width: 33%;
-	border: seagreen 1px solid;
+
+	/* border: seagreen 1px solid; */
 }
 
 .logo_nav {
@@ -86,16 +88,21 @@ a {
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, 0);
+	box-shadow: 0 -4px 2px -2px #eeeeee;
 
-	border: 2px green solid;
+	background-color: white;
+	/* border: 2px green solid; */
 }
 
 .main_content {
 	min-height: 100vh;
-	border: orange 1px solid;
+
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	margin-bottom: 50px;
+
+	/* border: orange 1px solid; */
 }
 
 .popular_board_container {
@@ -114,14 +121,24 @@ a {
 .popular_board_content_box {
 	display: flex;
 	height: 180px;
-	overflow-y: scroll;
+	overflow-y: auto;
+	scroll-snap-type: x;
 
 	/* border: 3px rgb(77, 151, 170) solid; */
 }
 .popular_board_content {
 	border: 3px #eeeeee solid;
-	border-radius: 10%;
 	margin: 5px;
-	min-width: 65%;
+	min-width: 80%;
 	height: 150px;
+}
+
+.x.mandatory-scroll-snapping {
+	scroll-snap-type: x mandatory;
+}
+
+.popular_board_content_box > div {
+	text-align: center;
+	scroll-snap-align: center;
+	flex: none;
 }

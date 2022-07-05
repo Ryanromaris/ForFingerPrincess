@@ -1,17 +1,16 @@
-import Flicking from '@egjs/react-flicking';
-import '@egjs/react-flicking/dist/flicking.css';
-
 const PopularBoard = () => {
 	return (
 		<>
-			<Flicking circular={true}>
-				<div className="slide_component">1</div>
-				<div className="slide_component">1</div>
-				<div className="slide_component">1</div>
-				<div className="slide_component">1</div>
-				<div className="slide_component">1</div>
-				<div className="slide_component">1</div>
-			</Flicking>
+			<div className="popular_board_container">
+				<div className="popular_board_title">인기 게시물</div>
+				<div className="popular_board_content_box">
+					<div className="popular_board_content"></div>
+					<div className="popular_board_content"></div>
+					<div className="popular_board_content"></div>
+					<div className="popular_board_content"></div>
+					<div className="popular_board_content"></div>
+				</div>
+			</div>
 		</>
 	);
 };

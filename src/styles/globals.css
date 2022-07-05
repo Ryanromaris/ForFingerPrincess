@@ -7,6 +7,15 @@ body {
 	background-color: white;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+}
+
 .screen_out {
 	overflow: hidden;
 	position: absolute;
@@ -20,23 +29,26 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 900px;
+
 	border: 3px blue solid;
 }
 
 .main_box {
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
 	width: 900px;
 	min-height: 100vh;
 	text-align: center;
+
+	overflow: hidden;
 
 	/* border: 1px red solid; */
 }
 
 .logo_box {
 	width: 100%;
-	height: 100px;
+	height: 50px;
 	position: sticky;
 	z-index: 10;
 	top: 0px;
@@ -68,7 +80,7 @@ body {
 
 .footer_nav_container {
 	width: 900px;
-	height: 100px;
+	height: 50px;
 
 	position: fixed;
 	bottom: 0;
@@ -78,27 +90,38 @@ body {
 	border: 2px green solid;
 }
 
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-* {
-	box-sizing: border-box;
-}
-
 .main_content {
-	height: 2000px;
+	min-height: 100vh;
 	border: orange 1px solid;
-	overflow-x: hidden;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 }
 
-.flicking_viewport {
-	width: 80%;
-	border: 1px soild red;
-}
-.slide_component {
-	width: 200px;
+.popular_board_container {
+	width: 90%;
 	height: 200px;
-	border: 1px solid #eeeeee;
+	margin: 10px;
+
+	/* border: 1px red solid; */
+}
+
+.popular_board_title {
+	display: flex;
+	margin: 10px;
+}
+
+.popular_board_content_box {
+	display: flex;
+	height: 180px;
+	overflow-y: scroll;
+
+	/* border: 3px rgb(77, 151, 170) solid; */
+}
+.popular_board_content {
+	border: 3px #eeeeee solid;
+	border-radius: 10%;
+	margin: 5px;
+	min-width: 65%;
+	height: 150px;
 }

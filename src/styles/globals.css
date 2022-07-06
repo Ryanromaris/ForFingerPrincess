@@ -129,7 +129,7 @@ a {
 .popular_board_content {
 	border: 3px #eeeeee solid;
 	margin: 5px;
-	min-width: 80%;
+	width: 80%;
 	height: 150px;
 }
 

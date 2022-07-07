@@ -121,7 +121,7 @@ a {
 .popular_board_content_box {
 	display: flex;
 	height: 180px;
-	overflow-y: auto;
+	overflow-y: hidden;
 	scroll-snap-type: x;
 
 	/* border: 3px rgb(77, 151, 170) solid; */
@@ -131,6 +131,11 @@ a {
 	margin: 5px;
 	width: 80%;
 	height: 150px;
+}
+.popular_board_content_title {
+	width: 100%;
+	height: 50px;
+	border: 1px purple solid;
 }
 
 .x.mandatory-scroll-snapping {

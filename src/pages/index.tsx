@@ -4,9 +4,11 @@ import PopularBoard from '../components/common-components/item/PopularBoard';
 
 const Home: NextPage = () => {
 	return (
-		<Layout hasLogoBar={true}>
-			<PopularBoard />
-		</Layout>
+		<>
+			<Layout hasLogoBar={true}>
+				<PopularBoard />
+			</Layout>
+		</>
 	);
 };
 

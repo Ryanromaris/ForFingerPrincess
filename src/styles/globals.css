@@ -37,7 +37,6 @@ a {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 900px;
 	min-height: 100vh;
 	text-align: center;
 
@@ -48,11 +47,12 @@ a {
 } */
 .logo_box {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0px;
-	width: 100%;
+	/* width: 100%; */
 	height: 50px;
 
 	z-index: 10;
@@ -71,6 +71,7 @@ a {
 
 .logo_nav {
 	display: flex;
+	justify-content: center;
 }
 
 .header_bar_container {
@@ -81,17 +82,23 @@ a {
 }
 
 .footer_nav_container {
-	width: 900px;
 	height: 50px;
-
-	position: fixed;
+	position: sticky;
 	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
+
 	box-shadow: 0 -4px 2px -2px #eeeeee;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 
 	background-color: white;
 	/* border: 2px green solid; */
+}
+.footer_nav_container > div {
+	width: 25%;
+	border-left: 1px #eeeeee solid;
+	border-right: 1px #8b8989 solid;
 }
 
 .main_content {
@@ -107,10 +114,12 @@ a {
 
 .popular_board_container {
 	width: 90%;
-	height: 200px;
+	height: 30%;
 	margin: 10px;
+	padding: 10px;
 
-	/* border: 1px red solid; */
+	border: 2px #eeeeee solid;
+	border-radius: 2%;
 }
 
 .popular_board_title {
@@ -127,7 +136,7 @@ a {
 	/* border: 3px rgb(77, 151, 170) solid; */
 }
 .popular_board_content {
-	border: 3px #eeeeee solid;
+	border: 2px #eeeeee solid;
 	margin: 5px;
 	width: 80%;
 	height: 150px;
@@ -135,7 +144,7 @@ a {
 .popular_board_content_title {
 	width: 100%;
 	height: 50px;
-	border: 1px purple solid;
+	/* border: 1px purple solid; */
 }
 
 .x.mandatory-scroll-snapping {
@@ -146,4 +155,15 @@ a {
 	text-align: center;
 	scroll-snap-align: center;
 	flex: none;
+}
+
+.add_article_button {
+	position: -webkit-sticky;
+	position: sticky;
+
+	width: 40px;
+	height: 40px;
+	border: 1px red solid;
+	bottom: 9%;
+	left: 85%;
 }

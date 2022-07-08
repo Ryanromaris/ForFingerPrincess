@@ -30,6 +30,30 @@ const PopularBoard = () => {
 							<div>더보기</div>
 						</div>
 					</div>
+					<div className="popular_board_container">
+						<div className="popular_board_title">인기 게시물</div>
+						<div className="popular_board_content_box x mandatory-scroll-snapping">
+							{popularArticle.map(content => (
+								<div className="popular_board_content">
+									<div className="popular_board_content_title">{truncateTitle(content?.title)}</div>
+									<div className="popular_board_content_body">{truncateTitle(content?.body)}</div>
+								</div>
+							))}
+							<div>더보기</div>
+						</div>
+					</div>
+					<div className="popular_board_container">
+						<div className="popular_board_title">인기 게시물</div>
+						<div className="popular_board_content_box x mandatory-scroll-snapping">
+							{popularArticle.map(content => (
+								<div className="popular_board_content">
+									<div className="popular_board_content_title">{truncateTitle(content?.title)}</div>
+									<div className="popular_board_content_body">{truncateTitle(content?.body)}</div>
+								</div>
+							))}
+							<div>더보기</div>
+						</div>
+					</div>
 				</>
 			)}
 		</>

@@ -8,6 +8,7 @@ export interface ILayoutProps {
 }
 
 const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
+	const addNewArticle = () => Router.push('/post');
 	return (
 		<>
 			<div className="main_container">
@@ -20,8 +21,8 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 							</Link>
 						</div>
 						<div className="logo_nav">
-							<div>검색아이콘</div>
-							<div>마이페이지 아이콘</div>
+							<div>검색</div>
+							<div>마이</div>
 						</div>
 					</div>
 
@@ -38,17 +39,26 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 					)}
 
 					<div className="main_content">{children}</div>
+					<div className="add_article_button" onClick={addNewArticle}>
+						+
+					</div>
 					<div className="footer_nav_container">
 						<div>
 							<Link href="/">
 								<a>Home</a>
 							</Link>
+						</div>
+						<div>
 							<Link href="/hair">
 								<a>Hair</a>
 							</Link>
+						</div>
+						<div>
 							<Link href="/health">
 								<a>Health</a>
 							</Link>
+						</div>
+						<div>
 							<Link href="/my">
 								<a>My</a>
 							</Link>

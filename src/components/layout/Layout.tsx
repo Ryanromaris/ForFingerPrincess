@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Router from 'next/router';
+import { Home, Article, NotificationsActive, Settings, AddCircle } from '@mui/icons-material';
 
 export interface ILayoutProps {
 	hasLogoBar?: boolean;
@@ -40,27 +41,33 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 
 					<div className="main_content">{children}</div>
 					<div className="add_article_button" onClick={addNewArticle}>
-						+
+						<AddCircle sx={{ fontSize: 50 }} />
 					</div>
 					<div className="footer_nav_container">
 						<div>
 							<Link href="/">
-								<a>Home</a>
+								<a>
+									<Home />
+								</a>
 							</Link>
 						</div>
 						<div>
 							<Link href="/hair">
-								<a>Hair</a>
+								<Article />
 							</Link>
 						</div>
 						<div>
 							<Link href="/health">
-								<a>Health</a>
+								<a>
+									<NotificationsActive />
+								</a>
 							</Link>
 						</div>
 						<div>
 							<Link href="/my">
-								<a>My</a>
+								<a>
+									<Settings />
+								</a>
 							</Link>
 						</div>
 					</div>

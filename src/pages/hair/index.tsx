@@ -3,7 +3,7 @@ import Layout from '../../components/layout/Layout';
 const HairPage = () => {
 	return (
 		<>
-			<Layout hasLogoBar={false}>
+			<Layout>
 				<div>Hair Page</div>
 			</Layout>
 		</>

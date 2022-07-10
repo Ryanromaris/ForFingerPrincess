@@ -1,7 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Router from 'next/router';
-import { Home, Article, NotificationsActive, Settings, AddCircle } from '@mui/icons-material';
+import {
+	Home,
+	Article,
+	NotificationsActive,
+	Settings,
+	AddCircle,
+	Search,
+	AccountCircle,
+} from '@mui/icons-material';
 
 export interface ILayoutProps {
 	hasLogoBar?: boolean;
@@ -15,15 +23,18 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 			<div className="main_container">
 				<div className="main_box">
 					<div className="logo_box">
-						<div className="">aa</div>
 						<div className="logo_image">
 							<Link href="/">
-								<Image src={'/logo.png'} alt="logo" width={90} height={45} />
+								<Image src={'/logo.png'} alt="logo" width={80} height={40} />
 							</Link>
 						</div>
 						<div className="logo_nav">
-							<div>검색</div>
-							<div>마이</div>
+							<div>
+								<Search sx={{ fontSize: 30 }} />
+							</div>
+							<div>
+								<AccountCircle sx={{ fontSize: 30 }} />
+							</div>
 						</div>
 					</div>
 

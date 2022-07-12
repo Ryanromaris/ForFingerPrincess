@@ -13,10 +13,12 @@ import {
 
 export interface ILayoutProps {
 	hasLogoBar?: boolean;
+	category?: string;
+	changeBoard?: any;
 	children?: React.ReactNode;
 }
 
-const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
+const Layout = ({ hasLogoBar = false, category, changeBoard, children }: ILayoutProps) => {
 	const addNewArticle = () => Router.push('/post');
 	return (
 		<>
@@ -40,12 +42,16 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 
 					{!hasLogoBar && (
 						<div className="header_bar_container">
-							<div>헤어 게시판</div>
-							<select name="boards" onChange={e => Router.push(`/${e.target.value}`)}>
-								<option value="hair">헤어 게시판</option>
-								<option value="health">헬스 게시판</option>
-								<option value="all">전체 게시판</option>
-								<option value="test2">Audi</option>
+							<div>{category}</div>
+							<select
+								name="boards"
+								onChange={e => {
+									changeBoard(e.target.value);
+								}}
+							>
+								<option value="ALL">전체 게시판</option>
+								<option value="HAIR">헤어 게시판</option>
+								<option value="HEALTH">헬스 게시판</option>
 							</select>
 						</div>
 					)}
@@ -63,8 +69,10 @@ const Layout = ({ hasLogoBar = false, children }: ILayoutProps) => {
 							</Link>
 						</div>
 						<div>
-							<Link href="/hair">
-								<Article />
+							<Link href="/board">
+								<a>
+									<Article />
+								</a>
 							</Link>
 						</div>
 						<div>

@@ -171,3 +171,28 @@ a {
 
 	/* border: 1px red solid; */
 }
+
+.article_container {
+	width: 100%;
+}
+.article_individual {
+	border: 1px red solid;
+	padding: 5px;
+}
+
+.article_row_1 {
+	display: flex;
+	justify-content: space-between;
+	margin: 3px;
+}
+
+.article_row_2 {
+	padding: 2px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.article_row_3 {
+	display: flex;
+	justify-content: flex-end;
+}

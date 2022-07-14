@@ -76,7 +76,7 @@ const Layout = ({ hasLogoBar = false, category, changeBoard, children }: ILayout
 							</Link>
 						</div>
 						<div>
-							<Link href="/health">
+							<Link href="/chatting">
 								<a>
 									<NotificationsActive />
 								</a>

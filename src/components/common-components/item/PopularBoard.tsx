@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const PopularBoard = () => {
-	const [popularArticle, setPopularArticle] = useState([]);
+	const [popularArticle, setPopularArticle] = useState<any[]>([]);
 	useEffect(() => {
 		fetch('https://jsonplaceholder.typicode.com/posts')
 			.then(response => response.json())
@@ -21,8 +21,8 @@ const PopularBoard = () => {
 					<div className="popular_board_container">
 						<div className="popular_board_title">인기 게시물</div>
 						<div className="popular_board_content_box x mandatory-scroll-snapping">
-							{popularArticle.map(content => (
-								<div className="popular_board_content">
+							{popularArticle.map((content, index) => (
+								<div className="popular_board_content" key={index}>
 									<div className="popular_board_content_title">{truncateTitle(content?.title)}</div>
 									<div className="popular_board_content_body">{truncateTitle(content?.body)}</div>
 								</div>
@@ -33,8 +33,8 @@ const PopularBoard = () => {
 					<div className="popular_board_container">
 						<div className="popular_board_title">인기 게시물</div>
 						<div className="popular_board_content_box x mandatory-scroll-snapping">
-							{popularArticle.map(content => (
-								<div className="popular_board_content">
+							{popularArticle.map((content, index) => (
+								<div className="popular_board_content" key={index}>
 									<div className="popular_board_content_title">{truncateTitle(content?.title)}</div>
 									<div className="popular_board_content_body">{truncateTitle(content?.body)}</div>
 								</div>
@@ -45,8 +45,8 @@ const PopularBoard = () => {
 					<div className="popular_board_container">
 						<div className="popular_board_title">인기 게시물</div>
 						<div className="popular_board_content_box x mandatory-scroll-snapping">
-							{popularArticle.map(content => (
-								<div className="popular_board_content">
+							{popularArticle.map((content, index) => (
+								<div className="popular_board_content" key={index}>
 									<div className="popular_board_content_title">{truncateTitle(content?.title)}</div>
 									<div className="popular_board_content_body">{truncateTitle(content?.body)}</div>
 								</div>

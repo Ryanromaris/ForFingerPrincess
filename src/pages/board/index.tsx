@@ -8,6 +8,11 @@ enum BOARD_KEY {
 	HEALTH = 'HEALTH',
 }
 
+interface IArticle {
+	id: number;
+	body: string;
+}
+
 const Board = ({ articles }: any) => {
 	const [category, setCategory] = useState(BOARD_KEY.ALL);
 	console.log(articles);
@@ -17,7 +22,7 @@ const Board = ({ articles }: any) => {
 				{category === BOARD_KEY.ALL && (
 					<>
 						<div className="article_container">
-							{articles?.map(article => (
+							{articles?.map((article: IArticle) => (
 								<div className="article_individual" key={article.id}>
 									<div className="article_row_1">
 										<div>작성자:{article.id}</div>

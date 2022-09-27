@@ -1,4 +1,4 @@
-import Layout from '../components/layout/Layout';
+import Layout from 'src/components/layout/Layout';
 // import { StreamChat } from 'stream-chat';
 // import { useEffect, useState } from 'react';
 // import { Channel, ChannelHeader, Window, Chat, MessageInput, MessageList } from 'stream-chat-react';

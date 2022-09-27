@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
-import Layout from '../components/layout/Layout';
-import PopularBoard from '../components/common-components/item/PopularBoard';
+import Layout from 'src/components/layout/Layout';
+import PopularBoard from 'src/components/common-components/item/PopularBoard';
 
 const Home: NextPage = () => {
 	return (

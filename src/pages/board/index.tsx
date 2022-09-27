@@ -1,4 +1,4 @@
-import Layout from '../../components/layout/Layout';
+import Layout from 'src/components/layout/Layout';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -15,7 +15,7 @@ interface IArticle {
 
 const Board = ({ articles }: any) => {
 	const [category, setCategory] = useState(BOARD_KEY.ALL);
-	console.log(articles);
+
 	return (
 		<>
 			<Layout category={category} changeBoard={setCategory}>

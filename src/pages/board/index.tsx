@@ -18,7 +18,7 @@ const Board = ({ articles }: any) => {
 
 	return (
 		<>
-			<Layout category={category} changeBoard={setCategory}>
+			<Layout hasLogoBar={true} category={category} changeBoard={setCategory}>
 				{category === BOARD_KEY.ALL && (
 					<>
 						<div className="article_container">

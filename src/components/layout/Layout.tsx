@@ -40,7 +40,7 @@ const Layout = ({ hasLogoBar = false, category, changeBoard, children }: ILayout
 						</div>
 					</div>
 
-					{!hasLogoBar && (
+					{hasLogoBar && (
 						<div className="header_bar_container">
 							<div>{category}</div>
 							<select

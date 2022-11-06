@@ -14,9 +14,11 @@
 		"@emotion/styled": "^11.9.3",
 		"@mui/icons-material": "^5.8.4",
 		"@mui/material": "^5.8.7",
+		"formik": "^2.2.9",
 		"next": "12.2.0",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-hook-form": "^7.39.1",
 		"react-text-truncate": "^0.19.0"
 	},
 	"devDependencies": {

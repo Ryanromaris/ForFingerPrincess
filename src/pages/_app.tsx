@@ -1,8 +1,13 @@
 import 'src/styles/globals.css';
 import type { AppContext, AppProps } from 'next/app';
+import { RecoilRoot, atom, selector, useRecoilState, useRecoilValue } from 'recoil';
 
 function MyApp({ Component, pageProps }: AppProps) {
-	return <Component {...pageProps} />;
+	return (
+		<RecoilRoot>
+			<Component {...pageProps} />
+		</RecoilRoot>
+	);
 }
 
 MyApp.getInitialProps = async ({ Component, ctx }: AppContext) => {

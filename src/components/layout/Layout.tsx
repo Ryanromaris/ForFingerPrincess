@@ -32,7 +32,9 @@ const Layout = ({ hasLogoBar = false, category, changeBoard, children }: ILayout
 						</div>
 						<div className="logo_nav">
 							<div>
-								<Search sx={{ fontSize: 30 }} />
+								<Link href="/search">
+									<Search sx={{ fontSize: 30 }} />
+								</Link>
 							</div>
 							<div>
 								<AccountCircle sx={{ fontSize: 30 }} />

@@ -1,6 +1,8 @@
 import Layout from 'src/components/layout/Layout';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { useRecoilState } from 'recoil';
+import { counting } from '../../store';
 
 enum BOARD_KEY {
 	ALL = 'ALL',
@@ -15,6 +17,7 @@ interface IArticle {
 
 const Board = ({ articles }: any) => {
 	const [category, setCategory] = useState(BOARD_KEY.ALL);
+	const [count] = useRecoilState(counting);
 
 	return (
 		<>
@@ -22,6 +25,7 @@ const Board = ({ articles }: any) => {
 				{category === BOARD_KEY.ALL && (
 					<>
 						<div className="article_container">
+							<span>{count}</span>
 							{articles?.map((article: IArticle) => (
 								<div className="article_individual" key={article.id}>
 									<div className="article_row_1">

@@ -4,6 +4,7 @@ import useGeolocation from 'src/hooks/useGeolocation';
 
 /* 
  geolocation 훅을 이용하여 지리정보 LOADING, 완료 시의 분기처리가 가능.
+ 
 */
 const Geolocation = () => {
 	const initialLocation = useGeolocation();

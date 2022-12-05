@@ -6,6 +6,8 @@ const Lab = () => {
 	return (
 		<Layout>
 			<Link href={'/lab/studyMemo'}>Study Memos</Link>
+			<Link href={'/lab/vibration'}>Study Vibration Api</Link>
+			<Link href={'/lab/geolocation'}>Study Geolocation Api</Link>
 		</Layout>
 	);
 };
